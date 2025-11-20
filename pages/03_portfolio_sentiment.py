@@ -11,7 +11,7 @@ import function.merge_price_data as merge_data
 
 st.write(""" ## Portfolio sentiment  """)
 
-St.write("""
+st.write("""
 plan for this page:
 load dat for stocks, bonds and gold.
 calculate an master-portfilio (e.g. 50/25/25).
