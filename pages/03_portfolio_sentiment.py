@@ -13,7 +13,7 @@ st.write(""" ## Portfolio sentiment  """)
 
 st.write("""
 plan for this page:
-load dat for stocks, bonds and gold.
+load data for stocks, bonds and gold.
 calculate an master-portfilio (e.g. 50/25/25).
 calculate the rsi for each data point.
 caluclate the average rsi for each category.
