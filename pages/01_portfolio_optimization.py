@@ -8,8 +8,6 @@ import seaborn as sns
 
 import function.get_price_data as price_data
 import function.merge_price_data as merge_data
-import function.chat_gpt_test as gpt
-#import function.create_combination_matrix as ccm
 
 st.write(""" ## Sharpe ratio  """)
 
@@ -19,20 +17,16 @@ exp_01 = st.expander("Show complete reference data", expanded=False)
 exp_01.write(df)
 
 ### create list from data
-#https://stackoverflow.com/questions/22341271/get-list-from-pandas-dataframe-column-or-row
-#name_list = df['name'].tolist()
-#st.write(name_list)
 name_arr = df['name'].to_numpy()
-#st.write(name_arr)
 
 ### select the options you want to have
 selected_names = st.multiselect('What do you want to include?',name_arr)
 st.write('You selected:', selected_names)
 
 ### select number of iterations
-iteration_number = st.slider('How many iterrations should be calculated?', 0, 200000, 100000)
+iteration_number = st.slider('How many iterrations should be calculated?', 0, 100000, 30000)
 ### select risk free rate
-risk_free_rate = st.slider('What can be considered as the risk free rate? [%]', 0.0, 2.0, 8.0) / 100
+risk_free_rate = st.slider('What can be considered as the risk free rate? [%]', 0.0, 1.0, 4.0) / 100
 
 
 ### get all data
@@ -124,9 +118,6 @@ def calculate_sharpe_ratios(data):
     
     portfolio_return = np.sum(data_mean_ret * weights) 
     portfolio_std_dev = np.dot(weights.T,np.dot(cor_matrix,weights)) 
-    #portfolio_std_dev = np.dot(weights.T,np.dot(cov_matrix,weights)) 
-    #portfolio_std_dev = np.sqrt(np.dot(weights.T,np.dot(cor_matrix,weights)))
-    #portfolio_std_dev = np.sqrt(np.dot(weights.T,np.dot(cov_matrix,weights)))
         
     simulation_result[0,i] = portfolio_return
     simulation_result[1,i] = portfolio_std_dev
@@ -168,11 +159,5 @@ if st.button('calculate optimal portfolio'):
   visualize_data(data)  
   calculate_sharpe_ratios(data)
 
-check_box = st.checkbox('Use less assets but longer timeframe?')
-if check_box:
-  selected_names = ['Gold','SP500']
-  data = gpt.get_data()
-  visualize_data(data)  
-  calculate_sharpe_ratios(data)
 else:
    st.write('')
