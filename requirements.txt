@@ -1,0 +1,16 @@
+streamlit
+pandas
+matplotlib
+numpy
+plotly
+seaborn
+openpyxl
+PyPDF2
+yfinance
+scipy
+quandl
+nasdaq-data-link
+fredapi
+pytrends
+investpy
+pandas_datareader
