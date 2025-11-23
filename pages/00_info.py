@@ -1,7 +1,5 @@
 import streamlit as st
 
-st.write(""" ## Info  """)
-
 mpt_text = """
 # Modern Portfolio Theory (MPT)
 
@@ -9,7 +7,7 @@ Modern Portfolio Theory (MPT) is a foundational framework in finance that explai
 
 ---
 
-# 🌐 What Is Modern Portfolio Theory?
+# What Is Modern Portfolio Theory?
 MPT is based on the idea that an investor should not evaluate investments individually but as part of a **portfolio**, where combining assets can reduce overall risk thanks to **diversification**.
 
 ### Key Goals:
@@ -19,7 +17,7 @@ MPT is based on the idea that an investor should not evaluate investments indivi
 
 ---
 
-# 🧠 Core Concepts in Modern Portfolio Theory
+# Core Concepts in Modern Portfolio Theory
 
 ## 1. Expected Return (ER)
 The weighted average of the expected returns of all assets in a portfolio.
@@ -38,7 +36,7 @@ MPT defines risk as the **variability** of returns (measured by variance or stan
 
 But here's the key idea:
 
-### 📌 The risk of a portfolio is not just the weighted average of individual risks.
+### The risk of a portfolio is not just the weighted average of individual risks.
 It also depends on how assets **move relative to each other**.
 
 ---
@@ -63,7 +61,7 @@ If you hold tech stocks *and* utility stocks, they usually respond differently t
 
 ---
 
-# 📈 The Efficient Frontier
+# The Efficient Frontier
 
 MPT shows all possible portfolios on a graph:
 
@@ -81,7 +79,7 @@ The **efficient frontier** is the curved line that represents these optimal port
 
 ---
 
-# 💰 The Risk-Free Asset and the Capital Market Line (CML)
+# The Risk-Free Asset and the Capital Market Line (CML)
 
 When you introduce a **risk-free asset** (e.g., government T-bills), the picture changes:
 
@@ -101,7 +99,7 @@ Depending on risk tolerance:
 
 ---
 
-# 🎯 Optimal Portfolio Selection
+# Optimal Portfolio Selection
 MPT says:
 
 > Your optimal portfolio = the portfolio on the efficient frontier that aligns with your risk tolerance.
@@ -112,7 +110,7 @@ Behaviorally:
 
 ---
 
-# ❗ Criticisms and Limitations of MPT
+# Criticisms and Limitations of MPT
 
 Although powerful, MPT has limitations:
 
@@ -132,7 +130,7 @@ Despite these issues, MPT remains a cornerstone of portfolio construction.
 
 ---
 
-# 🚀 Why MPT Still Matters Today
+# Why MPT Still Matters Today
 It provides:
 - A clear framework for assessing risk vs. return.
 - The basis for index investing.
