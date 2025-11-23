@@ -84,6 +84,8 @@ def calculate_sharpe_ratios(data):
   
   ### calculate return
   data_ret = data.pct_change()
+  exp_ret = st.expander("Show returns", expanded=False)
+  exp_ret.write(data_ret)  
   
   ### calculate mean returns
   st.write('### Mean return')
